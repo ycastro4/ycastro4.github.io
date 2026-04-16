@@ -129,6 +129,12 @@
   document.getElementById('text').innerText = "Adeu!";
 document.getElementById('text').color= "#ffc0cb";
 }
+    <p id="ocultar">Aquest text el puc ocultar o mostrar.</p>
+<button onclick="toggle()">Mostra/Oculta</button>
+    function toggle() {
+  const el = document.getElementById('ocultar');
+  el.style.display = el.style.display === "none" ? "block" : "none";
+}
     // Mode clar/fosc amb canvi d'icona
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = themeToggle.querySelector('i');
