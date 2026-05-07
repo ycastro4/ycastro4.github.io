@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reconeixement de Veu de Ruben</title>
+  <title>Reconeixement de Veu de Yago</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <title>Reconeixement de Veu amb Anàlisi de Sentiments</title>
@@ -108,8 +108,8 @@
   <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top">
     <div class="container-fluid">
       <!-- 5. Logo i text -->
-      <a class="navbar-brand d-flex align-items-center" href="https://rarauzo4.github.io/">
-        <img src="https://rarauzo4.github.io/logo.png" alt="Logo" class="logo rounded-circle me-2">
+      <a class="navbar-brand d-flex align-items-center" href="https://ycastro4.github.io/">
+        <img src="https://ycastro4.github.io/logo.png" alt="Logo" class="logo rounded-circle me-2">
         <span class="fw-bold">Web d'alumne</span>
       </a>
 
@@ -127,9 +127,9 @@
               <i class="fa-solid fa-diagram-project me-1"></i> Llenguatges de programació
             </a>
             <ul class="dropdown-menu" aria-labelledby="proj1Dropdown">
-              <li><a class="dropdown-item" href="https://rarauzo4.github.io/html"><i class="fa-solid fa-code me-1"></i>HTML</a></li>
-              <li><a class="dropdown-item" href="https://rarauzo4.github.io/css"><i class="fa-brands fa-css me-1"></i>CSS</a></li>
-              <li><a class="dropdown-item" href="https://rarauzo4.github.io/javascript"><i class="fa-brands fa-js me-1"></i>Javascript</a></li>
+              <li><a class="dropdown-item" href="https://ycastro4.github.io/html"><i class="fa-solid fa-code me-1"></i>HTML</a></li>
+              <li><a class="dropdown-item" href="https://ycastro4.github.io/css"><i class="fa-brands fa-css me-1"></i>CSS</a></li>
+              <li><a class="dropdown-item" href="https://ycastro4.github.io/javascript"><i class="fa-brands fa-js me-1"></i>Javascript</a></li>
             </ul>
           </li>
           <!-- Robot poeta -->
@@ -138,9 +138,9 @@
               <i class="fa-solid fa-folder-open me-1"></i> Robot poeta
             </a>
             <ul class="dropdown-menu" aria-labelledby="proj2Dropdown">
-              <li><a class="dropdown-item" href="https://rarauzo4.github.io/robot1"><i class="fa-solid fa-robot me-1"></i>Robot poeta v1</a></li>
-              <li><a class="dropdown-item" href="https://rarauzo4.github.io/robot2"><i class="fa-solid fa-book me-1"></i>></i>Robot poeta v2</a></li>
-               <li><a class="dropdown-item" href="https://rarauzo4.github.io/robot3"><i class="fa-solid fa-book-open me-1"></i>Robot poeta v3</a></li>
+              <li><a class="dropdown-item" href="https://ycastro4.github.io/robot1"><i class="fa-solid fa-robot me-1"></i>Robot poeta v1</a></li>
+              <li><a class="dropdown-item" href="https://ycastro4.github.io/robot2"><i class="fa-solid fa-book me-1"></i>></i>Robot poeta v2</a></li>
+               <li><a class="dropdown-item" href="https://ycastro4.github.io/robot3"><i class="fa-solid fa-book-open me-1"></i>Robot poeta v3</a></li>
             </ul>
           </li>
         </ul>
@@ -177,8 +177,6 @@ const diccionariSentiments = {
     "content": 2,
     "feliç": 2,
     "fantàstic": 3, 
-    "sexo": 99,
-    "orangutan": 999999999999999999999,
     
     // Paraules negatives (5 paraules)
     "dolent": -2,
@@ -186,8 +184,7 @@ const diccionariSentiments = {
     "trist": -2,
     "horrible": -3,
     "problema": -1,
-    "hamburguesa": -55, 
-    "espanya":-67,
+
 };
 
 function analitzarSentiment(text) {
@@ -210,16 +207,16 @@ function analitzarSentiment(text) {
     
     if (puntuacio > 2) {
         sentiment = "positiu";
-        missatge = "😊 Sentiment molt positiu";
+        missatge = "😂 Sentiment molt positiu";
     } else if (puntuacio > 0) {
         sentiment = "positiu";
-        missatge = "🙂 Sentiment positiu";
+        missatge = "😊 Sentiment positiu";
     } else if (puntuacio < -2) {
         sentiment = "negatiu";
-        missatge = "😠 Sentiment de puta merda";
+        missatge = "😒 Sentiment neutral";
     } else if (puntuacio < 0) {
         sentiment = "negatiu";
-        missatge = "😐 Sentiment negatiu";
+        missatge = "😓 Sentiment negatiu";
     }
     
     return {
