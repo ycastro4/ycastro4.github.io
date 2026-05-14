@@ -176,8 +176,7 @@ const diccionariSentiments = {
     "bé": 2,
     "content": 2,
     "feliç": 2,
-    "fantàstic": 3, 
-    
+    "fantàstic": 3,  
     // Paraules negatives (5 paraules)
     "dolent": -2,
     "malament": -2,
@@ -207,16 +206,16 @@ function analitzarSentiment(text) {
     
     if (puntuacio > 2) {
         sentiment = "positiu";
-        missatge = "😂 Sentiment molt positiu";
+        missatge = "😊 Sentiment molt positiu";
     } else if (puntuacio > 0) {
         sentiment = "positiu";
-        missatge = "😊 Sentiment positiu";
+        missatge = "🙂 Sentiment positiu";
     } else if (puntuacio < -2) {
         sentiment = "negatiu";
-        missatge = "😒 Sentiment neutral";
+        missatge = "😠 Sentiment de puta merda";
     } else if (puntuacio < 0) {
         sentiment = "negatiu";
-        missatge = "😓 Sentiment negatiu";
+        missatge = "😐 Sentiment negatiu";
     }
     
     return {
